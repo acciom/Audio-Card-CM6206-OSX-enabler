@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.cm6206enabler</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/CM6206Init</string>
+    </array>
+
+    <key>LaunchEvents</key>
+    <dict>
+        <key>com.apple.iokit.matching</key>
+        <dict>
+            <key>com.apple.device-attach</key>
+            <dict>
+                <key>IOProviderClass</key>
+                <string>IOUSBHostDevice</string>
+                <key>idVendor</key>
+                <integer>3468</integer>
+                <key>idProduct</key>
+                <integer>258</integer>
+                <key>IOMatchLaunchStream</key>
+                <true/>
+            </dict>
+        </dict>
+    </dict>
+
+    <key>UserName</key>
+    <string>root</string>
+
+    <key>KeepAlive</key>
+    <false/>
+</dict>
+</plist>
